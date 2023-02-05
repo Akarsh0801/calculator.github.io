@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Calculator</title>
+</head>
+<body class="p-2 bg-violet-300" >
+    <div id="head" class=" text-zinc-900 text-2xl md:text-3xl lg:text-3xl xl:text-3xl font-semibold text-center my-2 md:mt-3 lg:mt-3 xl:mt-3">
+        Calculator<hr class="bg-black h-0.5 w-auto text-center mx-auto">
+        </div>
+    <div class="flex flex-col justify-between items-center mx-auto w-fit bg-zinc-200 my-56 md:mt-64 lg:mt-64 xl:mt-72  rounded-md   ">
+    <input class="flex justify-end items-center bg-zinc-800 w-full h-16 text-white text-xl p-4 rounded-t-md " type="text" name="input" id="input" placeholder="0" >
+    </input>
+    <div class="flex-col justify-between space-y-3 my-2 p-1" id="btns">
+    <div id="row" class="space-x-4">
+        <button class="bg-zinc-800 text-xl font-sans text-white rounded-full h-11 w-11" onclick="calc('7')" id="btn" value="7">7</button>
+        <button class="bg-zinc-800 text-xl font-sans text-white rounded-full h-11 w-11" onclick="calc('8')" id="btn" value="8">8</button>
+        <button class="bg-zinc-800 text-xl font-sans text-white rounded-full h-11 w-11" onclick="calc('9')" id="btn" value="9">9</button>
+        <button class="bg-zinc-800 text-xl font-sans text-white rounded-full h-11 w-11" onclick="calc('/')" id="btn" value="/">/</button>
+    </div>
+
+    <div id="row" class="space-x-4">
+        <button class="bg-zinc-800 text-xl font-sans text-white rounded-full h-11 w-11" onclick="calc('4')" id="btn"  value="4">4</button>
+        <button class="bg-zinc-800 text-xl font-sans text-white rounded-full h-11 w-11" onclick="calc('5')" id="btn" value="5">5</button>
+        <button class="bg-zinc-800 text-xl font-sans text-white rounded-full h-11 w-11" onclick="calc('6')" id="btn" value="6">6</button>
+        <button class="bg-zinc-800 text-lxlg font-sans text-white rounded-full h-11 w-11" onclick="calc('*')" id="btn" value="*">*</button>
+    </div>
+
+    <div id="row" class="space-x-4">
+        <button class="bg-zinc-800 text-xl font-sans text-white rounded-full h-11 w-11" onclick="calc('1')" id="btn" value="1">1</button>
+        <button class="bg-zinc-800 text-xl font-sans text-white rounded-full h-11 w-11" onclick="calc('2')" id="btn" value="2">2</button>
+        <button class="bg-zinc-800 text-xl font-sans text-white rounded-full h-11 w-11" onclick="calc('3')" id="btn" value="3">3</button>
+        <button class="bg-zinc-800 text-xl font-sans text-white rounded-full h-11 w-11" onclick="calc('+')" id="btn" value="+">+</button>
+    </div>
+
+    <div id="row" class="space-x-4">
+        <button class="bg-zinc-800 text-lg font-sans text-white rounded-full h-11 w-11" type="button" onclick="clr()" id="ac">AC</button>
+        <button class="bg-zinc-800 text-lg font-sans text-white rounded-full h-11 w-11" onclick="calc('0')" id="btn" value="0">0</button>
+        <button class="bg-zinc-800 text-lg font-sans text-white rounded-full h-11 w-11" onclick="calc('-')" id="btn" value="-">-</button>
+        <button class="bg-zinc-800 text-lg font-sans text-white rounded-full h-11 w-11" onclick="calculate()"  id="equal" value="=" >=</button>
+    </div>
+
+</div>
+</div>
+<div class="text-center text-zinc-900 text-md">
+    <hr class="bg-black h-0.5 w-28 text-center mx-auto">
+    Made by <br><span class="text-lg font-semibold">Akarsh Srivastava</span>
+</div>
+
+<script>
+ 
+ var input1=document.getElementById("input")
+var btn1=document.getElementById("ac")
+
+ function calc(num){
+    input1.value+=num
+    input.value=input1.value
+ 
+ }
+   
+
+function calculate(){
+let x=input1.value
+let y=eval(x);
+input1.value=y;
+}
+
+
+function clr(){ 
+    input1.value="";
+ }
+
+</script>
+</body>
+</html>
